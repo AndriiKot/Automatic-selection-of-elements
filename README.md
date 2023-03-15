@@ -1,0 +1,1 @@
+﻿Automatic selection of elements
