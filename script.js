@@ -1,7 +1,10 @@
 ﻿
 let body = document.querySelector('body')
 
-let  label_chechbox = ['Text 1','Text 2','Text 3','Text 4','Text 5','Text 6']
+let  label_chechbox = [
+  'lorem qweerts','Re: Olfjaf', 'ladfjaepef','Ioeuq eqor erqor erqo',
+  'Lofggl gfldsj gjs gfsl uipy gfdsg'
+]
 let  header_content = `<h2>Automatic selection of elements</h2>`
 let  content_logic  =  `<p>Content logic: Shift + click</p>`
 
