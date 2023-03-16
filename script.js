@@ -5,7 +5,7 @@ let  label_chechbox = [
   'Lofggl gfldsj gjs gfsl uipy gfdsg'
 ]
 let  header_content = `<h2>Automatic selection of elements</h2>`
-let  content_logic  =  `<p>Content logic: Shift + click</p>`
+let  content_logic  =  `<p>Content logic: Click(first checkbox)!, Shift + click!(next checkbox)</p>`
 
 
 
@@ -53,8 +53,16 @@ function handleClick(e){
   let inBetween = false
 
   if(e.shiftKey && this.checked){
-    console.log('e >> ',e)
     
+    checkboxes.forEach(checkbox => {
+      if(checkbox === this || checkbox === lastChecked){
+        inBetween = !inBetween
+      }
+      if (inBetween){
+        checkbox.checked = true
+      }
+    })  
+
   }
 
   lastChecked = this
