@@ -46,17 +46,12 @@ for(let i = 0; i < label_chechbox.length; i++){
 
 body.innerHTML = sample//.replace(/^ +| +$|( ) +/g,"$1")
 
+function handleClick(e){
+  console.log('e >> ',e)
+}
 
 const checkboxes = document.querySelectorAll('.items input[type="checkbox"]')
-console.log(checkboxes)
-
-
-
-
-
-
-                  
-
+checkboxes.forEach(checkbox => checkbox.addEventListener('click',handleClick))
 
 
 
