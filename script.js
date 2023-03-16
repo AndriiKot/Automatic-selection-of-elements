@@ -44,14 +44,25 @@ for(let i = 0; i < label_chechbox.length; i++){
  
 
 
-body.innerHTML = sample//.replace(/^ +| +$|( ) +/g,"$1")
+body.innerHTML = sample.replace(/^ +| +$|( ) +/g,"$1")
+
+let lastChecked;
+const checkboxes = document.querySelectorAll('.items input[type="checkbox"]')
 
 function handleClick(e){
-  console.log('e >> ',e)
+  let inBetween = false
+
+  if(e.shiftKey && this.checked){
+    console.log('e >> ',e)
+    
+  }
+
+  lastChecked = this
 }
 
-const checkboxes = document.querySelectorAll('.items input[type="checkbox"]')
 checkboxes.forEach(checkbox => checkbox.addEventListener('click',handleClick))
+
+
 
 
 
