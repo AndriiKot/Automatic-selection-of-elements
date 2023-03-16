@@ -1,6 +1,5 @@
 ﻿
 let body = document.querySelector('body')
-
 let  label_chechbox = [
   'lorem qweerts','Re: Olfjaf', 'ladfjaepef','Ioeuq eqor erqor erqo',
   'Lofggl gfldsj gjs gfsl uipy gfdsg'
@@ -45,8 +44,11 @@ for(let i = 0; i < label_chechbox.length; i++){
  
 
 
-body.innerHTML = sample.replace(/^ +| +$|( ) +/g,"$1")
+body.innerHTML = sample//.replace(/^ +| +$|( ) +/g,"$1")
 
+
+const checkboxes = document.querySelectorAll('.items input[type="checkbox"]')
+console.log(checkboxes)
 
 
 
